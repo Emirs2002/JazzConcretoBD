@@ -17,7 +17,7 @@ const app = initializeApp(firebaseConfig);
 
 export const auth= getAuth(app);  //conexion con el modulo de autenticacion de firebase
 export const db= getFirestore(app);  //conexion con el modulo de base de datos de firebase
-export const store= getStorage(app);  //conexion con el modulo de Storage de firebase
+export const storage= getStorage(app);  //conexion con el modulo de Storage de firebase
 
 export const googleProvider= new GoogleAuthProvider();
 googleProvider.setCustomParameters({prompt:"select_account"});

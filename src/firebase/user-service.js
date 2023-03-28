@@ -1,5 +1,7 @@
 import { collection, doc, getDocs, setDoc,query,where } from "firebase/firestore";
 import { db } from "./config";
+import { storage } from "./config"
+import { uploadBytes, getDownloadURL, ref } from "firebase/storage";
 
 export async function createUserProfile(userId, data){
     return setDoc(doc(db,"users",userId),data);
@@ -23,3 +25,15 @@ export async function getUserProfile(email){
     }
 }
 
+
+export async function uploadPhoto(file, fileName) {
+  
+    const usersImagesRef = ref(storage, `profilepics/${fileName}`);
+  
+    await uploadBytes(usersImagesRef, file);
+  
+    const imgUrl = await getDownloadURL(usersImagesRef)
+  
+    return imgUrl
+    
+  }
