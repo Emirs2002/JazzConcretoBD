@@ -1,4 +1,5 @@
 import React from "react";
+import { Card } from "../../components/Card/Card"
 
 export function HomePage() {
   return (
@@ -25,6 +26,9 @@ export function HomePage() {
           src="src\assets\lupa.png"
           className="h-10 w-auto border-solid border-black border-2 bg-[#b03034] cursor-pointer rounded-sm"
         />
+      </div>
+      <div className="border-2 border-dashed border-black">
+        
       </div>
     </div>
   );
