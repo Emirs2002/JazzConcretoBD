@@ -11,6 +11,7 @@ export const signInWithGoogle= async () => {
             await createUserProfile((result.user.uid),{
                 email: result.user.email,
                 name: result.user.displayName,
+                photoUrl: result.user.photoURL,
             })
         }
         console.log(result);
