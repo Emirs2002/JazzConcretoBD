@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { HOME_PAGE, REGISTER_URL, LOGIN_URL } from "../../constants/url";
+import { HOME_PAGE, LOGIN_URL } from "../../constants/url";
 import { useUser } from "../../contexts/userContext";
 import { logout } from "../../firebase/auth-service";
 
@@ -107,11 +107,6 @@ export function Navbar() {
                 Inicia Sesión
               </Link>
             </li>
-            <span className="font-semibold mx-4 text-xl flex items-center cursor-pointer hover:underline">
-              <Link to={REGISTER_URL} className="pr-2" onClick={handlewindow}>
-                Registrarse
-              </Link>
-            </span>
           </>
         )}
       </ul>
