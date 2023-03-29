@@ -19,6 +19,7 @@ export function useMember() {
     });
 
     setMember(docArr);
+
     setLoading(false);
   };
 
