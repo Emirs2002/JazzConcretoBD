@@ -47,9 +47,17 @@ export function useMember() {
 
   const getSingleMember = async (carnet) => {
     setLoading(true);
-    const memberRef = doc(db, "members", carnet);
-    const result = await getDoc(memberRef);
-    setSingleMember(result.data());
+    const memberCarnet = query(
+      collection(db, "members"),
+      where('carnet', "==", carnet)
+    );
+    const result = await getDocs(memberCarnet);
+    const carArr = [];
+    result.forEach((doc) => {
+      carArr.push(doc.data());
+    });    
+    
+    setSingleMember(carArr[0]);
     
     setLoading(false);
   };

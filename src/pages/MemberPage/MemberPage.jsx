@@ -26,7 +26,7 @@ export function MemberPage() {
             alt=""
             className="rounded-full mb-2 w-44 h-auto border-2 border-gray-300"
           />
-          <h1 className="text-[#FE6D73] uppercase items-center tracking-widest text-lg font-bold">
+          <h1 className="text-[#742023] uppercase items-center tracking-widest text-lg font-bold">
             {singleMember && singleMember.name}{" "}
             {singleMember && singleMember.lastname}
           </h1>
