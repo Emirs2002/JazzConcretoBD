@@ -13,7 +13,7 @@ export function HomePage() {
 
   useEffect(() => {
     getAllMembers();
-    
+
     if (inputValue?.value == null) {
     } else {
       getMemberByParam(campo, inputValue.value);
@@ -37,7 +37,7 @@ export function HomePage() {
       </div>
       <div className="mt-10 text-2xl font-bold">
         <Link to={ADDMEMBER_PAGE}>
-          <button className="bg-[#FFCB77] rounded-md text-[#FEF9EF] p-4">
+          <button className="bg-[#FFCB77] shadow-md rounded-md text-yellow-700 p-4 border-2 border-yellow-700">
             Añadir integrantes
           </button>
         </Link>
@@ -46,7 +46,7 @@ export function HomePage() {
       <h1 className="mt-20 text-xl font-bold">
         ----------- BUSCAR INTEGRANTES -----------
       </h1>
-      <div className="w-90 mt-10 mb-6 flex">
+      <div className="w-90 mt-10 mb-2 flex">
         <input
           placeholder="Escriba aquí..."
           id="searchbar"
@@ -58,7 +58,7 @@ export function HomePage() {
             setCampo(e.target.value);
           }}
         >
-          <option value="none">Elegir filtro</option>
+          <option value="none">Filtrar</option>
           <option value="name">Nombre</option>
           <option value="instrumento">Instrumento</option>
           <option value="carrera">Carrera</option>
@@ -69,7 +69,7 @@ export function HomePage() {
           onClick={handleSearch}
         />
       </div>
-      <h1 className="mt-20 text-2xl font-bold">
+      <h1 className="mt-10 text-2xl font-bold">
         CONOCE A NUESTROS INTEGRANTES
       </h1>
       {isLoading && (
@@ -80,14 +80,29 @@ export function HomePage() {
       <div className="border-2 border-dashed rounded-xl border-black w-5/6 grid grid-cols-3 my-6">
         {!isLoading &&
           !searchMode &&
-          (members.map((member) => {
+          members.map((member) => {
             return <Card member={member} />;
-          }))}
+          })}
         {!isLoading &&
           searchMode &&
-          (memberParam.map((member) => {
+          memberParam.map((member) => {
             return <Card member={member} />;
-          }))}
+          })}
+      </div>
+
+      <div className="flex flex-row justify-between mb-10">
+        <img
+        className="w-96 mr-10"
+          src="https://firebasestorage.googleapis.com/v0/b/jazz-concreto.appspot.com/o/profilepics%2Flogo%203.jpg?alt=media&token=d81374cc-77b9-46c8-832a-b02e62549c81"
+          alt="logo 2"
+        />
+        
+        <img
+        className="w-96"
+          src="https://firebasestorage.googleapis.com/v0/b/jazz-concreto.appspot.com/o/profilepics%2Flogo%204.jpg?alt=media&token=d79ef73a-bfeb-4724-a3e2-8634c1e0a46d"
+          alt="logo 3"
+        />
+        
       </div>
     </div>
   );
