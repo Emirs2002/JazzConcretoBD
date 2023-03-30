@@ -15,11 +15,11 @@ export function Navbar() {
   const menu = (event) => {
     let list = document.querySelector("ul");
     event.currentTarget.className === "menu h-10 w-10"
-      ? ((event.currentTarget.src = "src/assets/close.png"),
+      ? ((event.currentTarget.src = "https://firebasestorage.googleapis.com/v0/b/jazz-concreto.appspot.com/o/profilepics%2Fclose.png?alt=media&token=a829c7ae-d24d-4d42-aa48-196e7b797de6"),
         (event.currentTarget.className = "close h-10 w-10"),
         list.classList.add("top-[70px]"),
         list.classList.add("opacity-100"))
-      : ((event.currentTarget.src = "src/assets/menu.png"),
+      : ((event.currentTarget.src = "https://firebasestorage.googleapis.com/v0/b/jazz-concreto.appspot.com/o/profilepics%2Fmenu.png?alt=media&token=e3b3e707-ea83-4b64-bf3a-e5711127143a"),
         (event.currentTarget.className = "menu h-10 w-10"),
         list.classList.remove("top-[70px]"),
         list.classList.remove("opacity-100"));
@@ -30,7 +30,7 @@ export function Navbar() {
     let list = document.querySelector("ul");
     let imagen = document.getElementById("close-img");
     imagen.currentTarget.className = "close h-10 w-10";
-    imagen.currentTarget.src = "src/assets/menu.png";
+    imagen.currentTarget.src = "https://firebasestorage.googleapis.com/v0/b/jazz-concreto.appspot.com/o/profilepics%2Fmenu.png?alt=media&token=e3b3e707-ea83-4b64-bf3a-e5711127143a";
     list.classList.remove("top-[70px]");
     list.classList.remove("opacity-100");
   };
@@ -42,7 +42,7 @@ export function Navbar() {
           <Link to={HOME_PAGE} className="flex pl-2" onClick={handlewindow}>
             <img
               className="w-auto h-12 inline mr-2"
-              src="src\assets\Logo Banda.png"
+              src="https://firebasestorage.googleapis.com/v0/b/jazz-concreto.appspot.com/o/profilepics%2FLogo%20Banda.png?alt=media&token=c5128d44-429c-4e11-b0f4-e74e26f32626"
               alt="App Logo"
             />
             <p className="text-2xl font-semibold text-[#FEF9EF] pt-1">
@@ -52,7 +52,7 @@ export function Navbar() {
         </span>
         <span className="cursor-pointer md:hidden block">
           <img
-            src="src\assets\menu.png"
+            src="https://firebasestorage.googleapis.com/v0/b/jazz-concreto.appspot.com/o/profilepics%2Fmenu.png?alt=media&token=e3b3e707-ea83-4b64-bf3a-e5711127143a"
             id="menu-img"
             className="menu h-10 w-10"
             onClick={menu}
@@ -81,7 +81,7 @@ export function Navbar() {
               {!user.photoUrl && (
                 <img
                   className="h-10 w-auto inline"
-                  src="src\assets\user.png"
+                  src="https://firebasestorage.googleapis.com/v0/b/jazz-concreto.appspot.com/o/profilepics%2Fuser.png?alt=media&token=da821565-1249-4031-9c7b-ec067e30a65a"
                   alt="Perfil"
                 />
               )}

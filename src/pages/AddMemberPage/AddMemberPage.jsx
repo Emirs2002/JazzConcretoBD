@@ -43,7 +43,7 @@ export function AddMemberPage() {
 
   return (
     <div className="flex flex-row">
-      <img src="src\assets\members.jpg" className="w-1/2"/>
+      <img src="https://firebasestorage.googleapis.com/v0/b/jazz-concreto.appspot.com/o/profilepics%2Fmembers.jpg?alt=media&token=63b106c3-7a64-4db4-8c2b-1e1b94e5f24a" className="w-1/2"/>
       <div className="flex flex-col items-center w-full pt-6 mb-10">
         <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
           <h1 className="font-semibold text-xl">
