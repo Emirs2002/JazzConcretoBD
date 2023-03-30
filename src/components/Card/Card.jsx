@@ -14,8 +14,7 @@ export function Card({ member }) {
       </div>
       <div className="md:flex md:flex-col md:items-center">
         <div className="pt-1 text-white text-xl font-bold">
-          {member.name} {member.lastname}
-          {/* <Link to={`/movie/${movie.id}`}>{movie.title}</Link> */}
+          <Link to={`/integrantes/${member.carnet}`}>{member.name} {member.lastname}</Link>
         </div>
         <div className="text-white flex justify-start m-2">
           Carrera: {member.carrera}

@@ -27,11 +27,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             }
           ></Route>
           <Route
-            path="/integrantes/:integranteId"
+            path="/integrantes/:carnet"
             element={
-              <PrivateRoute>
                 <MemberPage />
-              </PrivateRoute>
             }
           ></Route>
         </Route>
